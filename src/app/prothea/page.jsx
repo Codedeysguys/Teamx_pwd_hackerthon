@@ -49,13 +49,13 @@ const ProtheaPage = () => {
 								<FaClock className="text-blue-600 text-2xl mr-4" />
 								<span>
 									<strong>Enhanced Mobility:</strong> Lightweight and flexible,
-									Prothea's prosthetics provide better comfort for everyday use.
+									Prothea&apos;s prosthetics provide better comfort for everyday use.
 								</span>
 							</li>
 							<li className="flex items-start mb-4">
 								<FaGlobeAfrica className="text-blue-600 text-2xl mr-4" />
 								<span>
-									<strong>High Scalability:</strong> Prothea's growing impact
+									<strong>High Scalability:</strong> Prothea&apos;s growing impact
 									across Kenya, with over 100 prosthetics delivered and
 									counting.
 								</span>

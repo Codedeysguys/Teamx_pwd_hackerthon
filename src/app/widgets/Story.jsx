@@ -60,7 +60,7 @@ const StorySection = () => {
 								<strong>USSD Emergency Service:</strong> In case of medical
 								emergencies, {name} can instantly access emergency services
 								through a simple USSD code, ensuring that help is just a few
-								button presses away, even when she doesn't have access to the
+								button presses away, even when she doesn&apos;t have access to the
 								internet.
 							</li>
 							<li>
@@ -71,7 +71,7 @@ const StorySection = () => {
 								while balancing her academic life.
 							</li>
 							<li>
-								<strong>Google Locator with IoT:</strong> {name}'s family can
+								<strong>Google Locator with IoT:</strong> {name}&apos;s family can
 								use our locator feature to track her movements and ensure her
 								safety as she navigates her university or travels to different
 								locations. If {name} gets stuck somewhere, her family can
