@@ -1,4 +1,24 @@
 import "./globals.css";
+import Link from "next/link";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@/components/ui/navigation-menu";
 
 export const metadata = {
   title: "Create Next App",
@@ -8,9 +28,43 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        
-      >
+      <body>
+        <div className="mt-20 ml-24 w-24  bg-lime-300">
+          <Sheet>
+            <SheetTrigger>Chat</SheetTrigger>
+            <SheetContent>
+              <SheetHeader>
+                <SheetTitle>Start a chat</SheetTitle>
+                <SheetDescription>
+                  This will be the chat section
+                </SheetDescription>
+              </SheetHeader>
+            </SheetContent>
+          </Sheet>
+        </div>
+
+        <nav className="flex justify-center mt-48">
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <Link href="/" legacyBehavior passHref>
+                  <NavigationMenuTrigger>Home</NavigationMenuTrigger>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/blog" legacyBehavior passHref>
+                  <NavigationMenuTrigger>Blog</NavigationMenuTrigger>
+                </Link>
+                <NavigationMenuContent>
+                  <NavigationMenuLink>Malaria</NavigationMenuLink>
+                  <NavigationMenuLink>Cholera</NavigationMenuLink>
+                  <NavigationMenuLink>Ache</NavigationMenuLink>
+                  <NavigationMenuLink>Oval</NavigationMenuLink>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </nav>
         {children}
       </body>
     </html>
