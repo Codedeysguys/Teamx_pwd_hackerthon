@@ -17,12 +17,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <img
-          className=" h-14 fixed  bottom-10  right-10"
-          src="/chat.png"
-          alt="chat"
-        >
-          {/* <Sheet>
+
+        <div className="fixed  bottom-10  right-10">
+          <Sheet>
+            <SheetTrigger>
+              <img className=" h-14 " src="/chat.png" alt="chat"></img>
+            </SheetTrigger>
             <SheetContent>
               <SheetHeader>
                 <SheetTitle>Start a chat</SheetTitle>
@@ -31,9 +31,8 @@ export default function RootLayout({ children }) {
                 </SheetDescription>
               </SheetHeader>
             </SheetContent>
-          </Sheet> */}
-        </img>
-        <div className="mt-20 ml-24 w-24  bg-lime-300"></div>
+          </Sheet>
+        </div>
         {children}
       </body>
     </html>
