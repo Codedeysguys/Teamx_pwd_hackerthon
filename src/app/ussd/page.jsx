@@ -11,8 +11,8 @@ const USSDPage = () => {
 						SupportSync USSD Emergency Service
 					</h1>
 					<p className="text-lg text-gray-700 mt-4">
-						Your lifeline when you're off the grid. In times of crisis, help is
-						only a few button presses away with SupportSync's USSD service.
+						Your lifeline when you&apos;re off the grid. In times of crisis, help is
+						only a few button presses away with SupportSync&apos;s USSD service.
 					</p>
 				</div>
 
@@ -35,7 +35,7 @@ const USSDPage = () => {
 						<p className="text-lg text-gray-600">
 							USSD (Unstructured Supplementary Service Data) is a critical
 							service for people living in remote areas where access to the
-							internet is limited or unavailable. Through SupportSync's USSD
+							internet is limited or unavailable. Through SupportSync&apos;s USSD
 							service, users can instantly access emergency help, communicate
 							with rescue teams, and receive assistance even in the most
 							disconnected environments.
@@ -58,9 +58,9 @@ const USSDPage = () => {
 						When faced with an emergency, simply dial <strong>*3363#</strong>{" "}
 						using any mobile phone. This instantly connects you to local
 						emergency services, no matter where you are or your connection
-						status. Whether you're stranded in a remote village, or facing a
+						status. Whether you&apos;re stranded in a remote village, or facing a
 						medical emergency in a place with limited infrastructure,
-						SupportSync's USSD service bridges the gap and ensures help is on
+						SupportSync&apos;s USSD service bridges the gap and ensures help is on
 						the way.
 					</p>
 
@@ -82,8 +82,8 @@ const USSDPage = () => {
 								Location Detection
 							</h3>
 							<p className="text-gray-600 mt-2">
-								SupportSync's system captures your location, allowing responders
-								to know exactly where you are even if you can't describe it.
+								SupportSync&apos;s system captures your location, allowing responders
+								to know exactly where you are even if you can&apos;t describe it.
 							</p>
 						</div>
 
@@ -106,7 +106,7 @@ const USSDPage = () => {
 						Get Help Anytime, Anywhere
 					</h2>
 					<p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
-						With SupportSync's USSD emergency service, you can rest easy knowing
+						With SupportSync&apos;s USSD emergency service, you can rest easy knowing
 						that help is just a few button presses away, no matter how remote
 						your location. Dial <strong>*3363#</strong> for immediate
 						assistance.

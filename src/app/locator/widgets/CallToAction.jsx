@@ -7,7 +7,7 @@ const CallToAction = () => {
 				Ready to Implement Google Locator?
 			</h2>
 			<p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
-				SupportSync's Google Locator helps track and assist individuals in
+				SupportSync&apos;s Google Locator helps track and assist individuals in
 				distress. Implement this feature today and ensure timely assistance to
 				those in need.
 			</p>
