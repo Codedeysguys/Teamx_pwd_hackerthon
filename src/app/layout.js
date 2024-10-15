@@ -1,5 +1,4 @@
 import "./globals.css";
-import Link from "next/link";
 import {
   Sheet,
   SheetContent,
@@ -9,16 +8,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
 
 export const metadata = {
   title: "Create Next App",
@@ -42,29 +31,6 @@ export default function RootLayout({ children }) {
             </SheetContent>
           </Sheet>
         </div>
-
-        <nav className="flex justify-center mt-48">
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <Link href="/" legacyBehavior passHref>
-                  <NavigationMenuTrigger>Home</NavigationMenuTrigger>
-                </Link>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="/blog" legacyBehavior passHref>
-                  <NavigationMenuTrigger>Blog</NavigationMenuTrigger>
-                </Link>
-                <NavigationMenuContent>
-                  <NavigationMenuLink>Malaria</NavigationMenuLink>
-                  <NavigationMenuLink>Cholera</NavigationMenuLink>
-                  <NavigationMenuLink>Ache</NavigationMenuLink>
-                  <NavigationMenuLink>Oval</NavigationMenuLink>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-        </nav>
         {children}
       </body>
     </html>
