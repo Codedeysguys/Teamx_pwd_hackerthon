@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import Link from "next/link"; // Import the Next.js Link component
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,7 @@ const Navbar = () => {
 				<div className="flex justify-between items-center py-4">
 					{/* Logo */}
 					<div className="text-2xl font-bold text-blue-600">
-						<a href="/">SupportSync</a>
+						<Link href="/">SupportSync</Link>
 					</div>
 
 					{/* Hamburger Menu for Mobile */}
@@ -35,40 +36,46 @@ const Navbar = () => {
 
 					{/* Navigation Links (Hidden on Mobile) */}
 					<nav className="hidden md:flex space-x-8">
-						<a
-							href="#features"
+						<Link
+							href="/blog"
 							className="text-gray-600 hover:text-blue-600"
 						>
-							Features
-						</a>
-						<a
-							href="#community"
+							Latest Blogs
+						</Link>
+						<Link
+							href="/ussd"
 							className="text-gray-600 hover:text-blue-600"
 						>
-							Community
-						</a>
-						<a
-							href="#blog"
+							USSD Emergency Service
+						</Link>
+						<Link
+							href="/ksl"
 							className="text-gray-600 hover:text-blue-600"
 						>
-							Blog
-						</a>
-						<a
-							href="#contact"
+							Text-to-Video Translation
+						</Link>
+						<Link
+							href="/locator"
 							className="text-gray-600 hover:text-blue-600"
 						>
-							Contact Us
-						</a>
+							Google Locator
+						</Link>
+						<Link
+							href="/prothea"
+							className="text-gray-600 hover:text-blue-600"
+						>
+							Prothea Solutions
+						</Link>
 					</nav>
 
 					{/* Call to Action Button */}
 					<div className="hidden md:block">
-						<a
+						<Link
 							href="#get-started"
 							className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition"
 						>
 							Get Started
-						</a>
+						</Link>
 					</div>
 				</div>
 			</div>
@@ -78,49 +85,58 @@ const Navbar = () => {
 				<nav className="md:hidden bg-white shadow-md">
 					<ul className="space-y-4 px-4 py-6">
 						<li>
-							<a
-								href="#features"
+							<Link
+								href="/blog"
 								className="block text-gray-600 hover:text-blue-600"
 								onClick={toggleMenu}
 							>
-								Features
-							</a>
+								Latest Blogs
+							</Link>
 						</li>
 						<li>
-							<a
-								href="#community"
+							<Link
+								href="/ussd"
 								className="block text-gray-600 hover:text-blue-600"
 								onClick={toggleMenu}
 							>
-								Community
-							</a>
+								USSD Emergency Service
+							</Link>
 						</li>
 						<li>
-							<a
-								href="#blog"
+							<Link
+								href="/ksl"
 								className="block text-gray-600 hover:text-blue-600"
 								onClick={toggleMenu}
 							>
-								Blog
-							</a>
+								Text-to-Video Translation
+							</Link>
 						</li>
 						<li>
-							<a
-								href="#contact"
+							<Link
+								href="/locator"
 								className="block text-gray-600 hover:text-blue-600"
 								onClick={toggleMenu}
 							>
-								Contact Us
-							</a>
+								Google Locator
+							</Link>
 						</li>
 						<li>
-							<a
+							<Link
+								href="/prothea"
+								className="block text-gray-600 hover:text-blue-600"
+								onClick={toggleMenu}
+							>
+								Prothea Solutions
+							</Link>
+						</li>
+						<li>
+							<Link
 								href="#get-started"
 								className="block px-6 py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition text-center"
 								onClick={toggleMenu}
 							>
 								Get Started
-							</a>
+							</Link>
 						</li>
 					</ul>
 				</nav>
