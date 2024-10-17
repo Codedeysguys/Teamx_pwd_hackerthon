@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+##SupportSync
+SupportSync is a web-based platform dedicated to empowering people with disabilities (PWDs). The platform offers various tools to enhance communication, provide emergency services, and enable access to expert advice. Our goal is to help individuals with disabilities stay connected, safe, and informed.
 
-## Getting Started
+##Table of Contents
+Technologies Used
+Usage
+Demo
+Contributing
 
-First, run the development server:
+##Features
+Interactive Chat: Engage in real-time conversations with the community.
+USSD Emergency Service: Access emergency services instantly through USSD codes.
+Text-to-Video Translation: Translate text to sign language videos for seamless communication with the hearing-impaired.
+Google Locator: Track loved ones’ locations for their safety.
+Consult a Doctor: Seek medical advice from qualified professionals.
+AI-based Insights: Receive expert advice through AI-powered tools.
+Prothea Solutions: Explore prosthetics and orthotic solutions via an external partner.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+##Technologies Used
+Frontend: React.js, HTML, CSS, JavaScript
+Backend: Node.js, Express.js
+Database: MongoDB
+Deployment: Vercel
+Usage
+Use the chat feature to connect with other users.
+Utilize the USSD service for emergency assistance.
+Access medical and AI-based expert advice from the dashboard.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+##Demo
+You can check out the live demo of the application here (replace with your demo link).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+##Contributing
+We welcome contributions. Please follow these steps:
+Fork the repo and create a new branch.
+Make your changes and commit them.
+Open a Pull Request for review.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
