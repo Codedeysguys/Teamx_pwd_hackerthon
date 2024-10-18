@@ -48,12 +48,18 @@ const Navbar = () => {
 						>
 							USSD Emergency Service
 						</Link>
-						<Link
-							href="/ksl"
-							className="text-gray-600 hover:text-blue-600"
-						>
-							Text-to-Video Translation
-						</Link>
+						<li className=" list-none flex gap-2 ">
+							<Link
+								href="/ksl"
+								className="block text-gray-600 hover:text-blue-600"
+							>
+								Text-to-KSL
+							</Link>
+							{/* Coming Soon Badge */}
+							<span className=" text-center bg-yellow-300 text-black font-semibold py-1 px-2 rounded-md text-xs">
+								Coming Soon
+							</span>
+						</li>
 						<Link
 							href="/locator"
 							className="text-gray-600 hover:text-blue-600"
@@ -102,7 +108,7 @@ const Navbar = () => {
 								USSD Emergency Service
 							</Link>
 						</li>
-						<li>
+						<li className="relative">
 							<Link
 								href="/ksl"
 								className="block text-gray-600 hover:text-blue-600"
@@ -110,6 +116,10 @@ const Navbar = () => {
 							>
 								Text-to-Video Translation
 							</Link>
+							{/* Coming Soon Badge */}
+							<span className="absolute top-0 right-0 bg-yellow-300 text-black font-semibold py-1 px-2 rounded-md text-xs">
+								Coming Soon
+							</span>
 						</li>
 						<li>
 							<Link
