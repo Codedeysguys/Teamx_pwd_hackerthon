@@ -31,7 +31,7 @@ SupportSync is a web-based platform dedicated to empowering people with disabili
 - Translate Text to Kenya Sign Language
 
 ## Demo
-You can check out the live demo of the application [here](https://supportsync.vercel.app/) .
+You can check out the live hosted link of the application [here](https://supportsync.vercel.app/) .
 
 ## App Screenshots
 ![image](https://github.com/user-attachments/assets/f9af3337-301e-4681-bea2-1d6a1ecc27bc)
