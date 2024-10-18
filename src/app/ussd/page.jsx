@@ -106,7 +106,7 @@ const USSDPage = () => {
 					<p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
 						With SupportSync&apos;s USSD emergency service, you can rest easy knowing
 						that help is just a few button presses away, no matter how remote
-						your location. Dial <strong>*3363#</strong> for immediate
+						your location. Dial <strong>*384*28228#</strong> for immediate
 						assistance.
 					</p>
 				</div>
