@@ -3,6 +3,7 @@ import HeroSection from "./widgets/HeroSection";
 import FeaturesSection from "./widgets/Features";
 import SuccessStoriesSection from "./widgets/SuccessStoriesSection";
 import StorySection from "./widgets/Story";
+import TeamsComponent from "./widgets/Team";
 
 const LandingPage = () => {
 	return (
@@ -11,6 +12,7 @@ const LandingPage = () => {
 			<FeaturesSection />
 			<StorySection />
 			<SuccessStoriesSection />
+			<TeamsComponent />
 		</div>
 	);
 };
