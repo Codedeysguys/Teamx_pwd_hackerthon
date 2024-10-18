@@ -10,9 +10,9 @@ const StorySection = () => {
 				<h2 className="text-3xl font-bold mb-12">{`${name}'s Story`}</h2>
 				<div className="flex flex-col md:flex-row items-center justify-center gap-12">
 					<div className="w-full md:w-1/3">
-						<div className="h-64 bg-gray-200 rounded-lg shadow-lg overflow-hidden">
+						<div className="h-64 md:h-full bg-gray-200 rounded-lg shadow-lg overflow-hidden">
 							<img
-								src="https://via.placeholder.com/300"
+								src="/assets/kamila.png"
 								alt={`${name}'s Story`}
 								className="w-full h-full object-cover"
 							/>
@@ -60,8 +60,8 @@ const StorySection = () => {
 								<strong>USSD Emergency Service:</strong> In case of medical
 								emergencies, {name} can instantly access emergency services
 								through a simple USSD code, ensuring that help is just a few
-								button presses away, even when she doesn&apos;t have access to the
-								internet.
+								button presses away, even when she doesn&apos;t have access to
+								the internet.
 							</li>
 							<li>
 								<strong>Expert Advice:</strong> {name} can seek medical and
@@ -71,11 +71,11 @@ const StorySection = () => {
 								while balancing her academic life.
 							</li>
 							<li>
-								<strong>Google Locator with IoT:</strong> {name}&apos;s family can
-								use our locator feature to track her movements and ensure her
-								safety as she navigates her university or travels to different
-								locations. If {name} gets stuck somewhere, her family can
-								immediately know her location and provide assistance.
+								<strong>Google Locator with IoT:</strong> {name}&apos;s family
+								can use our locator feature to track her movements and ensure
+								her safety as she navigates her university or travels to
+								different locations. If {name} gets stuck somewhere, her family
+								can immediately know her location and provide assistance.
 							</li>
 						</ul>
 
@@ -87,7 +87,7 @@ const StorySection = () => {
 						</p>
 
 						<a
-							href="#learn-more"
+							href="/blog"
 							className="inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 transition"
 						>
 							Learn More About Our Impact
