@@ -1,6 +1,7 @@
 ## SupportSync
 SupportSync is a web-based platform dedicated to empowering people with disabilities (PWDs). The platform offers various tools to enhance communication, provide emergency services, and enable access to expert advice. Our goal is to help individuals with disabilities stay connected, safe, and informed.
-
+## PITCH VIDEO
+[Pitch Video](https://drive.google.com/file/d/1m3nPc9S4RfMTCrHz4ZnXanpcnkhoRnfg/view?usp=sharing)
 
 ## Features
 - **Interactive Chat:** Engage in real-time conversations with the community.
