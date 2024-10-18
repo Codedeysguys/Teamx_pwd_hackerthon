@@ -32,7 +32,7 @@ const Blogs = () => {
               <h2 className="text-2xl font-semibold text-blue-500 hover:text-blue-600 transition-colors duration-300">
                 {blog.Title}
               </h2>
-              <span className="bg-blue-200 text-blue-600 text-xs font-medium px-2 py-1 rounded-full">
+              <span className="bg-blue-200 text-blue-600 text-xs font-medium px-2 py-1 rounded">
                 {blog.category}
               </span>
             </div>
