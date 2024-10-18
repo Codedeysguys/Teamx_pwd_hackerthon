@@ -1,7 +1,11 @@
 ## SupportSync
 SupportSync is a web-based platform dedicated to empowering people with disabilities (PWDs). The platform offers various tools to enhance communication, provide emergency services, and enable access to expert advice. Our goal is to help individuals with disabilities stay connected, safe, and informed.
+
 ## PITCH VIDEO
 [Pitch Video](https://drive.google.com/file/d/1m3nPc9S4RfMTCrHz4ZnXanpcnkhoRnfg/view?usp=sharing)
+
+## PITCH SLIDES
+[Pitch Deck SLides](https://www.canva.com/design/DAGToK7cbBA/X-GBsuRr-3pgw23tDaQR7A/edit?utm_content=DAGToK7cbBA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ## Features
 - **Interactive Chat:** Engage in real-time conversations with the community.
@@ -46,6 +50,9 @@ You can check out the live demo of the application [here](https://supportsync.ve
 ![image](https://github.com/user-attachments/assets/491ff3a1-61f3-40e3-8822-5da5f80b024d)
 ![image](https://github.com/user-attachments/assets/a505bfde-fafb-49a5-b574-96db98217d9d)
 ![image](https://github.com/user-attachments/assets/26b0d427-7cfa-48e5-ac35-6173d47de7fd)
+
+## Incase Pitch Link Failed
+![Pitch Video](/perfectpitch.webm)
  
 ## Contributing
 We welcome contributions. Please follow these steps:
