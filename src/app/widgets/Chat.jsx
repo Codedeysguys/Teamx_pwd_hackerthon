@@ -9,6 +9,7 @@ const Chat = () => {
     if (!userInput.trim()) return;
 
     setMessages((prev) => [...prev, { sender: "user", text: userInput }]);
+    setUserInput("");
 
     const response = await fetch("/api/chat", {
       method: "POST",
@@ -22,12 +23,12 @@ const Chat = () => {
     console.log(data);
 
     setMessages((prev) => [...prev, { sender: "gpt", text: data.response }]);
-    setUserInput("");
+    
   };
 
   return (
     <div>
-      <div className="flex flex-col h-96 overflow-y-auto bg-gray-100 p-4 rounded-lg space-y-4">
+      <div className="flex flex-col  h-96 overflow-y-auto bg-gray-100 p-4 rounded-lg space-y-4">
         {messages.map((msg, idx) => (
           <div
             key={idx}
@@ -61,4 +62,4 @@ const Chat = () => {
   );
 };
 
-export default Chat; // Ensure you export the component
+export default Chat; 
