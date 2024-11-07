@@ -1,5 +1,4 @@
 import React from "react";
-import { FaMobileAlt, FaMapMarkerAlt, FaLifeRing } from "react-icons/fa";
 
 const USSDPage = () => {
 	return (
@@ -16,86 +15,85 @@ const USSDPage = () => {
 					</p>
 				</div>
 
-				{/* Illustration + Key Points */}
-				<div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-					{/* Illustration */}
-					<div className="text-center">
-						<img
-							src="assets/ussd.jpg"
-							alt="USSD Service Illustration"
-							className="rounded-lg shadow-lg"
-						/>
-					</div>
-
-					{/* Key Points */}
-					<div className="space-y-6">
-						<h2 className="text-3xl font-semibold text-blue-600">
-							Why USSD Matters
-						</h2>
-						<p className="text-lg text-gray-600">
-							USSD (Unstructured Supplementary Service Data) is a critical
-							service for people living in remote areas where access to the
-							internet is limited or unavailable. Through SupportSync&apos;s USSD
-							service, users can instantly access emergency help, communicate
-							with rescue teams, and receive assistance even in the most
-							disconnected environments.
-						</p>
-						<ul className="list-disc list-inside text-lg text-gray-700">
-							<li>Available without internet access</li>
-							<li>Simple and accessible from any mobile phone</li>
-							<li>Works in remote areas where coverage is minimal</li>
-							<li>Immediate connection to emergency services</li>
-						</ul>
-					</div>
-				</div>
-
-				{/* How It Works Section */}
+				{/* USSD Flow - Step by Step */}
 				<div className="mt-16">
 					<h2 className="text-3xl font-bold text-center text-blue-600">
-						How Does It Work?
+						USSD Flow - Step by Step
 					</h2>
 					<p className="text-lg text-center text-gray-600 max-w-3xl mx-auto mt-4">
-						When faced with an emergency, simply dial <strong>*3363#</strong>{" "}
-						using any mobile phone. This instantly connects you to local
-						emergency services, no matter where you are or your connection
-						status. Whether you&apos;re stranded in a remote village, or facing a
-						medical emergency in a place with limited infrastructure,
-						SupportSync&apos;s USSD service bridges the gap and ensures help is on
-						the way.
+						Below is the flow of how the USSD service works, from dialing the USSD code to receiving emergency help.
 					</p>
 
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 text-center">
-						<div className="bg-white p-6 rounded-lg shadow-lg">
-							<FaMobileAlt className="text-blue-500 text-6xl mx-auto mb-4" />
-							<h3 className="text-xl font-semibold text-blue-600">
-								Dial *3363#
-							</h3>
-							<p className="text-gray-600 mt-2">
-								Using any mobile phone, dial <strong>*3363#</strong> to connect
-								instantly to emergency responders.
-							</p>
+					{/* Image Grid */}
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+						{/* Image 1 */}
+						<div className="text-center">
+							<img
+								src="/assets/ussd1.jpg"
+								alt="USSD Menu"
+								className="rounded-lg shadow-lg w-64 h-64 object-cover mx-auto"
+							/>
+							<p className="mt-4 text-lg text-gray-600">Step 1: Initial USSD Menu</p>
 						</div>
 
-						<div className="bg-white p-6 rounded-lg shadow-lg">
-							<FaMapMarkerAlt className="text-green-500 text-6xl mx-auto mb-4" />
-							<h3 className="text-xl font-semibold text-green-600">
-								Location Detection
-							</h3>
-							<p className="text-gray-600 mt-2">
-								SupportSync&apos;s system captures your location, allowing responders
-								to know exactly where you are even if you can&apos;t describe it.
-							</p>
+						{/* Image 2 */}
+						<div className="text-center">
+							<img
+								src="/assets/ussd2.jpg"
+								alt="Enter Emergency Contact"
+								className="rounded-lg shadow-lg w-64 h-64 object-cover mx-auto"
+							/>
+							<p className="mt-4 text-lg text-gray-600">Step 2: Enter Emergency Contact</p>
 						</div>
 
-						<div className="bg-white p-6 rounded-lg shadow-lg">
-							<FaLifeRing className="text-red-500 text-6xl mx-auto mb-4" />
-							<h3 className="text-xl font-semibold text-red-600">
-								Immediate Response
-							</h3>
-							<p className="text-gray-600 mt-2">
-								Once connected, emergency services are dispatched to your exact
-								location, ensuring quick help.
-							</p>
+						{/* Image 3 */}
+						<div className="text-center">
+							<img
+								src="/assets/ussd3.jpg"
+								alt="Contact Saved"
+								className="rounded-lg shadow-lg w-64 h-64 object-cover mx-auto"
+							/>
+							<p className="mt-4 text-lg text-gray-600">Step 3: Contact Saved Confirmation</p>
+						</div>
+
+						{/* Image 4 */}
+						<div className="text-center">
+							<img
+								src="/assets/ussd4.jpg"
+								alt="View Registered Contacts"
+								className="rounded-lg shadow-lg w-64 h-64 object-cover mx-auto"
+							/>
+							<p className="mt-4 text-lg text-gray-600">Step 4: View Registered Contacts</p>
+						</div>
+
+						{/* Image 5 */}
+						<div className="text-center">
+							<img
+								src="/assets/ussd5.jpg"
+								alt="Select Contact to Remove"
+								className="rounded-lg shadow-lg w-64 h-64 object-cover mx-auto"
+							/>
+							<p className="mt-4 text-lg text-gray-600">Step 5: Select Contact to Remove</p>
+						</div>
+
+						{/* Image 6 */}
+						<div className="text-center">
+							<img
+								src="/assets/ussd6.jpg"
+								alt="Contact Removed"
+								className="rounded-lg shadow-lg w-64 h-64 object-cover mx-auto"
+							/>
+							<p className="mt-4 text-lg text-gray-600">Step 6: Contact Removed Confirmation</p>
+						</div>
+
+						{/* Image 7 */}
+						<div className="text-center">
+							<img
+								src="/assets/ussd7.jpg"
+								alt="SOS Alert Sent"
+								className="rounded-lg shadow-lg w-64 h-64 object-cover mx-auto"
+							/>
+							<p className="mt-4 text-lg text-gray-600">Step 7: SOS Alert Sent</p>
 						</div>
 					</div>
 				</div>
@@ -108,7 +106,7 @@ const USSDPage = () => {
 					<p className="text-lg text-gray-600 mt-4 max-w-2xl mx-auto">
 						With SupportSync&apos;s USSD emergency service, you can rest easy knowing
 						that help is just a few button presses away, no matter how remote
-						your location. Dial <strong>*3363#</strong> for immediate
+						your location. Dial <strong>*384*28228#</strong> for immediate
 						assistance.
 					</p>
 				</div>

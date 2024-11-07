@@ -3,12 +3,12 @@ import Footer from "./widgets/Footer";
 import Navbar from "./widgets/Navbar";
 import Chat from "./widgets/Chat"; // Make sure the path is correct
 import {
-  Sheet,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-  SheetDescription,
+	Sheet,
+	SheetContent,
+	SheetHeader,
+	SheetTitle,
+	SheetTrigger,
+	SheetDescription,
 } from "../components/ui/sheet";
 
 export default function RootLayout({ children }) {
@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
                     Meet Maish, Your Friendly Assistant
                   </h2>
                   <p className="text-white text-opacity-90 text-lg">
-                    Im here to answer any of your questions
+                   I&apos;m here to answer any of your questions
                   </p>
                 </SheetTitle>
                 <SheetDescription className="">
