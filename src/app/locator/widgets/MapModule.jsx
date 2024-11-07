@@ -20,14 +20,19 @@ const knhLocation = {
 	lng: 36.8077,
 };
 
-// Hospital icon URL
-const hospitalIcon = "http://maps.google.com/mapfiles/ms/icons/hospitals.png";
+// Gmaps icon URLs
+const hospitalIcon = "https://maps.google.com/mapfiles/ms/icons/hospitals.png";
+const redDotIcon = "https://maps.google.com/mapfiles/ms/icons/red-dot.png";
+const greenDotIcon = "https://maps.google.com/mapfiles/ms/icons/green-dot.png";
 
 const MapModule = () => {
 	const [currentLocation, setCurrentLocation] = useState(null);
 	const [deviceLocations, setDeviceLocations] = useState([]);
 	const [deviceId, setDeviceId] = useState(null);
-	const [directionsResponse, setDirectionsResponse] = useState(null); // Add directionsResponse state
+	const [directionsResponse, setDirectionsResponse] = useState(null);
+	const [loading, setLoading] = useState(true); // Map loading state
+	const [isSimulating, setIsSimulating] = useState(false); // Button loading state
+	const [errorMessage, setErrorMessage] = useState(""); // Error message state
 
 	// Generate or retrieve device ID
 	useEffect(() => {
@@ -40,7 +45,6 @@ const MapModule = () => {
 	}, []);
 
 	useEffect(() => {
-		console.log("Device ID:", deviceId); // Check if deviceId is set
 		if (deviceId && navigator.geolocation) {
 			navigator.geolocation.getCurrentPosition(
 				(position) => {
@@ -50,13 +54,18 @@ const MapModule = () => {
 					};
 					setCurrentLocation(location);
 					saveLocation(location, deviceId);
+					setLoading(false); // Stop loading once location is retrieved
 				},
 				(error) => {
+					setErrorMessage("Failed to retrieve current location.");
 					console.error("Error fetching current location:", error);
+					setLoading(false); // Stop loading even if location retrieval fails
 				}
 			);
 		} else if (!navigator.geolocation) {
+			setErrorMessage("Geolocation is not supported by this browser.");
 			console.error("Geolocation is not supported by this browser.");
+			setLoading(false); // Stop loading if geolocation is unsupported
 		}
 	}, [deviceId]);
 
@@ -96,6 +105,7 @@ const MapModule = () => {
 
 	// Handle directions request
 	const handleSimulateAction = () => {
+		setIsSimulating(true); // Set button to loading state
 		if (currentLocation) {
 			const directionsService = new google.maps.DirectionsService();
 			directionsService.route(
@@ -105,67 +115,83 @@ const MapModule = () => {
 					travelMode: google.maps.TravelMode.DRIVING,
 				},
 				(result, status) => {
+					setIsSimulating(false); // Reset button loading state
 					if (status === google.maps.DirectionsStatus.OK) {
 						setDirectionsResponse(result);
 					} else {
+						setErrorMessage("Failed to retrieve directions.");
 						console.error(`Error fetching directions: ${status}`);
 					}
 				}
 			);
 		} else {
+			setErrorMessage("Current location not set.");
 			console.error("Current location not set.");
+			setIsSimulating(false); // Reset button loading state
 		}
 	};
 
 	return (
 		<LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}>
-			<GoogleMap
-				mapContainerStyle={containerStyle}
-				center={knhLocation}
-				zoom={12}
-			>
-				{/* Render marker for current location */}
-				{currentLocation && (
-					<Marker
-						position={currentLocation}
-						icon={{
-							url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
-						}}
-					/>
+			<div>
+				{errorMessage && (
+					<div className="alert alert-danger">{errorMessage}</div>
 				)}
 
-				{/* Render markers for all devices' locations */}
-				{deviceLocations.map((location, index) => (
-					<Marker
-						key={index}
-						position={{ lat: location.lat, lng: location.lng }}
-						icon={{
-							url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
-						}}
-					/>
-				))}
+				{loading ? (
+					<div className="loader">Loading Map...</div> // Show loading indicator
+				) : (
+					<GoogleMap
+						mapContainerStyle={containerStyle}
+						center={knhLocation}
+						zoom={12}
+					>
+						{/* Render marker for current location */}
+						{currentLocation && (
+							<Marker
+								position={currentLocation}
+								icon={{
+									url: redDotIcon,
+								}}
+							/>
+						)}
 
-				{/* Render KNH hospital marker */}
-				<Marker
-					position={knhLocation}
-					icon={{
-						url: hospitalIcon,
-					}}
-				/>
+						{/* Render markers for all devices' locations */}
+						{deviceLocations.map((location, index) => (
+							<Marker
+								key={index}
+								position={{ lat: location.lat, lng: location.lng }}
+								icon={{
+									url: greenDotIcon,
+								}}
+							/>
+						))}
 
-				{/* Render directions if available */}
-				{directionsResponse && (
-					<DirectionsRenderer directions={directionsResponse} />
+						{/* Render KNH hospital marker */}
+						<Marker
+							position={knhLocation}
+							icon={{
+								url: hospitalIcon,
+							}}
+						/>
+
+						{/* Render directions if available */}
+						{directionsResponse && (
+							<DirectionsRenderer directions={directionsResponse} />
+						)}
+					</GoogleMap>
 				)}
-			</GoogleMap>
-			{/* Button to simulate action */}
-			<div className="mt-4">
-				<button
-					onClick={handleSimulateAction}
-					className="px-4 py-2 bg-blue-600 text-white rounded-md"
-				>
-					Simulate Action
-				</button>
+
+				{/* Button to simulate action */}
+				<div className="mt-4">
+					<button
+						onClick={handleSimulateAction}
+						className="px-4 py-2 bg-blue-600 text-white rounded-md"
+						disabled={isSimulating}
+					>
+						{isSimulating ? "Loading..." : "Simulate Action"}
+					</button>
+				</div>
 			</div>
 		</LoadScript>
 	);
