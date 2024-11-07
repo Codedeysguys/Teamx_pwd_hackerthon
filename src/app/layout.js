@@ -20,18 +20,18 @@ export default function RootLayout({ children }) {
             <SheetTrigger>
               <img className="h-16" src="/chat.png" alt="chat" />
             </SheetTrigger>
-            <SheetContent className="max-w-md h-[80vh] rounded-lg mt-10">
+            <SheetContent className="max-w-md md:h-[80vh] rounded-lg ">
               <SheetHeader>
                 <SheetTitle className="relative bg-gradient-to-r from-blue-500 to-teal-500 p-6 rounded-lg shadow-lg text-center animate-fadeIn">
                   <h2 className="text-2xl font-bold text-white mb-2 animate-bounce">
                     Meet Maish, Your Friendly Assistant
                   </h2>
                   <p className="text-white text-opacity-90 text-lg">
-                    I'm here to answer any of your questions
+                    Im here to answer any of your questions
                   </p>
                 </SheetTitle>
-                <SheetDescription>
-                  <Chat /> {/* Place the Chat component here */}
+                <SheetDescription className="">
+                  <Chat /> 
                 </SheetDescription>
               </SheetHeader>
             </SheetContent>
